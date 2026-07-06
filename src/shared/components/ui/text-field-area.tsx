@@ -3,7 +3,7 @@ import {
   forwardRef,
   type TextareaHTMLAttributes,
 } from 'react'
-import { cn } from 'shared/lib/utils'
+import { cn } from '@/shared/lib/utils'
 import { Label } from './label'
 import { Textarea } from './textarea'
 

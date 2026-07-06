@@ -2,6 +2,12 @@
   "name": "next-stack",
   "version": "1.0.0",
   "description": "FullStack Next Starter",
+  "author": {
+    "name": "Soheil Ghanbary",
+    "email": "soli.ghanbary@gmail.com",
+    "url": "https://github.com/soheilghanbary"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -22,11 +28,11 @@
     "@tanstack/react-query": "^5.101.2",
     "better-auth": "^1.6.23",
     "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
+    "cnfast": "^0.0.8",
     "date-fns": "^4.4.0",
     "dotenv": "^17.4.2",
-    "drizzle-orm": "^0.45.2",
+    "drizzle-orm": "1.0.0-rc.4",
     "embla-carousel-react": "^8.6.0",
     "input-otp": "^1.4.2",
     "lucide-react": "^1.23.0",
@@ -38,10 +44,10 @@
     "react": "19.2.7",
     "react-day-picker": "^10.0.1",
     "react-dom": "19.2.7",
-    "react-hook-form": "^7.80.0",
-    "react-resizable-panels": "^4.12.0",
-    "recharts": "3.9.1",
-    "shadcn": "^4.12.0",
+    "react-hook-form": "^7.81.0",
+    "react-resizable-panels": "^4.12.1",
+    "recharts": "3.9.2",
+    "shadcn": "^4.13.0",
     "sonner": "^2.0.7",
     "vaul": "^1.1.2",
     "zod": "^4.4.3",
@@ -56,11 +62,10 @@
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
     "babel-plugin-react-compiler": "^1.0.0",
-    "drizzle-kit": "^0.31.10",
+    "drizzle-kit": "1.0.0-rc.4",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
     "postcss": "^8.5.16",
-    "tailwind-merge": "^3.6.0",
     "tailwind-variants": "^3.2.2",
     "tailwindcss": "^4.3.2",
     "tailwindcss-animated": "^2.1.0",
@@ -74,6 +79,5 @@
       "biome format --write --no-errors-on-unmatched",
       "biome lint --write --no-errors-on-unmatched"
     ]
-  },
-  "packageManager": "pnpm@11.7.0+sha512.19cc852c120c7125760f2443ee6be0ca5b40f9f50598de1a09a1f177503e010e57c23c77646e01e761de59bf874fb22a3398c33ab9691fc13eb946b6f0f4d620"
+  }
 }

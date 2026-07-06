@@ -1,12 +1,11 @@
 'use client'
-
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from 'embla-carousel-react'
 import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react'
 import * as React from 'react'
-import { Button } from 'shared/components/ui/button'
-import { cn } from 'shared/lib/utils'
+import { Button } from '@/shared/components/ui/button'
+import { cn } from '@/shared/lib/utils'
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
@@ -186,8 +185,8 @@ function CarouselPrevious({
       className={cn(
         'absolute touch-manipulation rounded-2xl',
         orientation === 'horizontal'
-          ? '-start-12 top-1/2 -translate-y-1/2'
-          : 'start-1/2 -top-12 -translate-x-1/2 rotate-90 rtl:translate-x-1/2',
+          ? '-inset-s-12 top-1/2 -translate-y-1/2'
+          : 'inset-s-1/2 -top-12 -translate-x-1/2 rotate-90 rtl:translate-x-1/2',
         className
       )}
       disabled={!canScrollPrev}
@@ -216,8 +215,8 @@ function CarouselNext({
       className={cn(
         'absolute touch-manipulation rounded-2xl',
         orientation === 'horizontal'
-          ? '-end-12 top-1/2 -translate-y-1/2'
-          : 'start-1/2 -bottom-12 -translate-x-1/2 rotate-90 rtl:translate-x-1/2',
+          ? '-inset-e-12 top-1/2 -translate-y-1/2'
+          : 'inset-s-1/2 -bottom-12 -translate-x-1/2 rotate-90 rtl:translate-x-1/2',
         className
       )}
       disabled={!canScrollNext}

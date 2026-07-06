@@ -1,6 +1,6 @@
 'use client'
 import { useQuery } from '@tanstack/react-query'
-import { client } from 'server/lib/orpc.client'
+import { client } from '@/server/lib/orpc.client'
 
 export const MessageCSR = () => {
   const { data, isLoading } = useQuery(client.hello.queryOptions())

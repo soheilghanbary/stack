@@ -4,7 +4,7 @@ import {
   type InputHTMLAttributes,
   useId,
 } from 'react'
-import { cn } from 'shared/lib/utils'
+import { cn } from '@/shared/lib/utils'
 import { Input } from './input'
 import { Label } from './label'
 

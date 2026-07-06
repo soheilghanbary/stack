@@ -1,6 +1,6 @@
 'use cache: private'
 import { cacheLife } from 'next/cache'
-import { api } from 'server/lib/orpc.client'
+import { api } from '@/server/lib/orpc.client'
 
 export const MessageSSR = async () => {
   cacheLife('days')
