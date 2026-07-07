@@ -1,6 +1,6 @@
 import '@/server/lib/orpc.server'
 import '@/shared/styles/globals.css'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import type { PropsWithChildren } from 'react'
 import Providers from '@/shared/components/providers'
@@ -10,6 +10,15 @@ const font = Inter({
   weight: ['400', '500', '600', '700', '800', '900'],
   subsets: ['latin-ext'],
 })
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  colorScheme: 'light',
+  themeColor: 'var(--primary)',
+}
 
 export const metadata: Metadata = {
   title: {
@@ -25,14 +34,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="theme-color" href="#000000" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-        />
-      </head>
       <body className={`${font.className} antialiased`}>
         <Providers>{children}</Providers>
       </body>
