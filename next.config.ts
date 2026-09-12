@@ -3,9 +3,10 @@ import type { NextConfig } from 'next'
 const nextConfig: NextConfig = {
   reactCompiler: true,
   cacheComponents: true,
-  typedRoutes: true,
+  partialPrefetching: true,
   experimental: {
     typedEnv: true,
+    turbopackRustReactCompiler: true,
   },
   typescript: {
     ignoreBuildErrors: true,

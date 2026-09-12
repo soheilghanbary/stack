@@ -1,10 +1,9 @@
-import '@/server/lib/orpc.server'
-import '@/shared/styles/globals.css'
+import '@/styles/globals.css'
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import type { PropsWithChildren } from 'react'
-import Providers from '@/shared/components/providers'
-import { appConfig } from '@/shared/config'
+import Providers from '@/components/providers'
+import { appConfig } from '@/config'
 
 const font = Inter({
   weight: ['400', '500', '600', '700', '800', '900'],

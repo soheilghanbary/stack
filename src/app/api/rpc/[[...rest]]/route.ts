@@ -1,20 +1,15 @@
 import { RPCHandler } from '@orpc/server/fetch'
-import { CORSPlugin } from '@orpc/server/plugins'
-import { router } from '@/server/router'
+import { BatchHandlerPlugin } from '@orpc/server/plugins'
+import { router } from '@/server/orpc/router'
 
 export const handler = new RPCHandler(router, {
-  plugins: [
-    new CORSPlugin({
-      origin: (origin, _) => origin,
-      allowMethods: ['GET', 'HEAD', 'PUT', 'POST', 'DELETE', 'PATCH'],
-    }),
-  ],
+  plugins: [new BatchHandlerPlugin()],
 })
 
 async function handleRequest(request: Request) {
   const { response } = await handler.handle(request, {
     prefix: '/api/rpc',
-    context: {}, // Provide initial context if needed
+    context: {},
   })
 
   return response ?? new Response('Not found', { status: 404 })

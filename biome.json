@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
-    "ignoreUnknown": false
+    "ignoreUnknown": true
   },
   "vcs": {
     "enabled": true,
@@ -62,7 +62,15 @@
       "correctness": {
         "preset": "recommended",
         "useExhaustiveDependencies": "off",
-        "noNestedComponentDefinitions": "off"
+        "noNestedComponentDefinitions": "off",
+        "noUnusedImports": {
+          "level": "error",
+          "fix": "safe"
+        },
+        "noUnusedVariables": {
+          "level": "error",
+          "fix": "safe"
+        }
       },
       "a11y": {
         "preset": "recommended",
