@@ -32,8 +32,6 @@
     "class-variance-authority": "^0.7.1",
     "cmdk": "^1.1.1",
     "cn": "^0.3.0",
-    "cnfast": "^0.2.0",
-    "date-fns": "^4.4.0",
     "dotenv": "^17.4.2",
     "drizzle-orm": "1.0.0-rc.4",
     "embla-carousel-react": "^8.6.0",
