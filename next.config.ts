@@ -8,9 +8,6 @@ const nextConfig: NextConfig = {
     typedEnv: true,
     turbopackRustReactCompiler: true,
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   images: {
     remotePatterns: [
       {

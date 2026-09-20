@@ -8,12 +8,7 @@ declare global {
   var $client: RouterClient<typeof router> | undefined
 }
 
-// if (import.meta.env.SSR) {
-//   await import('./server')
-// }
-
 const link = new RPCLink({
-  origin: process.env.NEXT_PUBLIC_URL,
   url: '/api/rpc',
   headers: async () => {
     if (typeof window !== 'undefined') {
