@@ -41,8 +41,10 @@ export default async () => {
             <ModeToggle />
           </div>
           <Separator />
-          <MessageCSR />
-          <Suspense fallback={<p>Loading Data...</p>}>
+          <Suspense fallback={<p>Loading Client Data...</p>}>
+            <MessageCSR />
+          </Suspense>
+          <Suspense fallback={<p>Loading Server Data...</p>}>
             <MessageSSR />
           </Suspense>
         </div>

@@ -10,6 +10,7 @@ declare global {
 
 const link = new RPCLink({
   url: '/api/rpc',
+  origin: process.env.NEXT_PUBLIC_URL,
   headers: async () => {
     if (typeof window !== 'undefined') {
       return {}
