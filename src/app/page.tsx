@@ -9,7 +9,7 @@ import { Separator } from '@/components/ui/separator'
 import { appConfig } from '@/config'
 import { cn } from '@/lib/utils'
 
-const GITHUB_REPO_URL = 'https://github.com/soheilghanbary/nrpc'
+const GITHUB_REPO_URL = 'https://github.com/soheilghanbary/stack'
 const COPYRIGHT_TEXT = `© ${new Date().getFullYear()} ${appConfig.name} ${appConfig.version} - Soheil Ghanbary`
 
 export default async () => {
