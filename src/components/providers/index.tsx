@@ -6,14 +6,14 @@ import { QueryProvider } from './query-provider'
 import { ToastProvider } from './toast-provider'
 
 export default function Providers({ children }: PropsWithChildren) {
-  return (
-    <NuqsAdapter>
-      <QueryProvider>
-        <ThemeProvider attribute="class" enableColorScheme defaultTheme="light">
-          {children}
-          <ToastProvider />
-        </ThemeProvider>
-      </QueryProvider>
-    </NuqsAdapter>
-  )
+	return (
+		<NuqsAdapter>
+			<QueryProvider>
+				<ThemeProvider attribute="class" enableColorScheme defaultTheme="light">
+					{children}
+					<ToastProvider />
+				</ThemeProvider>
+			</QueryProvider>
+		</NuqsAdapter>
+	)
 }
