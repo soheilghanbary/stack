@@ -16,7 +16,7 @@ export default async () => {
 	return (
 		<section className="flex size-full h-dvh items-center justify-center">
 			<div className="w-full max-w-sm">
-				<div className="fade-in flex animate-duration-700 animate-fade flex-col gap-y-3 p-4">
+				<div className="fade-in flex animate-blurred-fade-in animate-duration-400 flex-col gap-y-3 p-4">
 					<h1 className="font-black text-4xl">
 						<span>{appConfig.name}</span>
 					</h1>
