@@ -1,6 +1,6 @@
 export const appConfig = {
-	name: 'Stack',
-	title: 'Stack',
+	name: 'Next Stack',
+	title: 'Next Stack',
 	version: '1.0',
 	description: 'Full-Stack starter',
 }
