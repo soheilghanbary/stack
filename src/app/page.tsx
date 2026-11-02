@@ -16,11 +16,11 @@ export default async () => {
 	return (
 		<section className="flex size-full h-dvh items-center justify-center">
 			<div className="w-full max-w-sm">
-				<div className="fade-in flex animate-blurred-fade-in animate-duration-400 flex-col gap-y-3 p-4">
-					<h1 className="font-black text-4xl">
+				<div className="flex animate-blurred-fade-in flex-col gap-y-3 p-4 animate-duration-400 fade-in">
+					<h1 className="text-4xl font-black">
 						<span>{appConfig.name}</span>
 					</h1>
-					<p className="font-normal text-base">{appConfig.description}</p>
+					<p className="text-base font-normal">{appConfig.description}</p>
 					<div className="grid grid-cols-2 gap-x-2">
 						<Link
 							href={GITHUB_REPO_URL}
@@ -30,9 +30,9 @@ export default async () => {
 						</Link>
 						<OAuthButton />
 					</div>
-					<p className="text-muted-foreground text-xs">{COPYRIGHT_TEXT}</p>
+					<p className="text-xs text-muted-foreground">{COPYRIGHT_TEXT}</p>
 					<div className="flex items-center justify-between">
-						<p className="text-muted-foreground text-xs">
+						<p className="text-xs text-muted-foreground">
 							Mode:{' '}
 							<span className="font-medium text-primary underline decoration-wavy underline-offset-3">
 								{process.env.NODE_ENV}

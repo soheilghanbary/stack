@@ -1,12 +1,21 @@
+import { withRedact } from '@tanstack/redact/next'
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-	reactCompiler: true,
 	cacheComponents: true,
 	partialPrefetching: true,
+	reactCompiler: true,
 	experimental: {
 		typedEnv: true,
 		turbopackRustReactCompiler: true,
+	},
+	turbopack: {
+		rules: {
+			'*.css': {
+				loaders: ['@tailwindcss/turbopack'],
+				as: '*.css',
+			},
+		},
 	},
 	images: {
 		remotePatterns: [
@@ -22,4 +31,4 @@ const nextConfig: NextConfig = {
 	},
 }
 
-export default nextConfig
+export default withRedact(nextConfig)

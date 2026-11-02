@@ -27,6 +27,12 @@
 			"tailwindDirectives": true
 		}
 	},
+	"tailwind": {
+		"stylesheet": "./src/app/globals.css",
+		"attributes": ["class", "className", "tw"],
+		"mergeFunctions": ["clsx", "cn", "tw"],
+		"variantFunctions": ["cva"]
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
@@ -40,14 +46,12 @@
 				"noAssignInExpressions": "off"
 			},
 			"nursery": {
-				"preset": "recommended",
-				"useSortedClasses": {
+				"useReactCompiler": "error",
+				"useTailwindShorthandClasses": "error",
+				"useReactNamingConvention": "error",
+				"useTailwindSortedClasses": {
 					"fix": "safe",
-					"level": "warn",
-					"options": {
-						"attributes": ["classList"],
-						"functions": ["clsx", "cva", "tv"]
-					}
+					"level": "warn"
 				}
 			},
 			"performance": {
@@ -61,7 +65,10 @@
 			"correctness": {
 				"preset": "recommended",
 				"useExhaustiveDependencies": "off",
+				"noNextAsyncClientComponent": "error",
 				"noNestedComponentDefinitions": "off",
+				"useHookAtTopLevel": "error",
+				"noReactPropAssignments": "error",
 				"noUnusedImports": {
 					"level": "error",
 					"fix": "safe"

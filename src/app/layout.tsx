@@ -1,4 +1,4 @@
-import '@/styles/globals.css'
+import './globals.css'
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import type { PropsWithChildren } from 'react'
